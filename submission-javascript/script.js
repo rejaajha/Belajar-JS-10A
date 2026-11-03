@@ -147,6 +147,16 @@ console.log(Boolean(100));
 // 2. Koperasi memberikan diskon potongan harga sebesar Rp 2.500. Hitung total bayar akhir setelah diskon (-).
 // 3. Siti membawa 17 permen untuk dibagikan kepada 4 temannya secara merata. Hitung sisa permen yang tidak habis terbagi menggunakan modulus (%)!
 // 4. Tampilkan juga hasil dari 2 pangkat 5 (**) ke console!
+let bukuTulis = 5000 * 4;
+let pulpen = 3000 * 2;
+let total = bukuTulis + pulpen
+console.log(`total belanja siti di toko ATK adalah ${total - 2500}`);
+
+let sisaPermen = 17 % 4;
+console.log('sisa permen siti adalah ' + sisaPermen);
+
+let pangkat = 2 ** 5;
+console.log('hasil dari 2 pangkat 5 adalah ' + pangkat);
 
 // Soal 3.4 (Studi Kasus: Buku Kas Tabungan - Operator Penugasan / Assignment):
 // Tabungan awal Budi di dompet digital adalah Rp 50.000 (variabel `saldo = 50000`).
@@ -155,12 +165,22 @@ console.log(Boolean(100));
 // 2. Budi membeli jajan seharga Rp 15.000 (gunakan `-=`).
 // 3. Uang yang tersisa diinvestasikan dan menghasilkan keuntungan 2 kali lipat (gunakan `*=`).
 // Tampilkan nilai saldo akhir Budi ke console!
+let saldo = 50000;
+saldo += 25000;
+saldo -= 15000
+saldo *= 2
+console.log('sisa saldo budi adalah ' + saldo);
 
 // Soal 3.5 (Studi Kasus: Verifikasi Ketat Sistem - Loose vs Strict Comparison):
 // Diberikan variabel `skorA` = 10 (tipe number) dan `skorB` = '10' (tipe string).
 // 1. Bandingkan `skorA == skorB` dan cetak hasilnya ke console (apa hasilnya dan mengapa?).
 // 2. Bandingkan `skorA === skorB` dan cetak hasilnya ke console (apa hasilnya dan mengapa?).
 // 3. Bandingkan `skorA !== skorB` dan cetak hasilnya ke console!
+let skorA = 10;
+let skorB = '10';
+console.log(skorA == skorB); //true karena operato hanya membandingkan nilai
+console.log(skorA === skorB); //false karena operato membandingkan nilai dan tipe data
+console.log(skorA !== skorB); //true karena 10 bukan sama dgn string
 
 
 // ==============================================================================
@@ -171,25 +191,44 @@ console.log(Boolean(100));
 // Syarat membuat SIM C adalah usia minimal 17 tahun DAN dinyatakan lulus ujian praktek (lulusPraktek = true).
 // Diketahui Rian berusia 18 tahun dan nilai lulusPraktek bernilai true.
 // Tentukan apakah Rian berhak mendapatkan SIM menggunakan operator && dan simpan hasilnya di variabel `dapatSim`!
+let lulusPraktek = true;
+let usiaRian = 18;
+let syaratSimC = usiaRian >= 17 && lulusPraktek == true;
+console.log('apakah rian memenuhi syarat?? ' + syaratSimC);
 
 // Soal 4.2 (Studi Kasus: Autentikasi Login Akun Ujian - Operator &&):
 // Seorang siswa hanya dapat login ke ruang ujian jika username bernilai "siswa10A" DAN token bernilai "PAS2026".
 // Jika seorang siswa menginput username = "siswa10A" dan token = "PAS2025", tentukan apakah status login berhasil menggunakan operator &&!
+let username = "siswa10A"
+let token = "PAS2025"
+let loginUjian = username == 'siswa10A' && token == 'PAS2026';
+console.log('apakah siswa memenuhi syarat login ke ruang ujian?? ' + loginUjian);
 
 // Soal 4.3 (Studi Kasus: Tiket Masuk Edupark - Operator ||):
 // Wahana wisata edukasi memberikan tiket masuk gratis jika pengunjung berusia balita (kurang dari 5 tahun) ATAU berstatus penyandang disabilitas (isDisabilitas = true).
 // Jika seorang pengunjung berusia 4 tahun dan isDisabilitas = false, tentukan apakah pengunjung tersebut mendapatkan tiket gratis menggunakan operator ||!
+let usiaPengunjung = 4;
+let isDisabilitas = false;
+let tiketGratis = usiaPengunjung < 5 || isDisabilitas == true;
+console.log('apakah pengunjung memenuhi syarat unutk mendapat tiket gratis? ' + tiketGratis);
 
 // Soal 4.4 (Studi Kasus: Sistem Keamanan Laboratorium Komputer - Operator !):
 // Alarm pengaman pintu lab akan menyala jika status pintu TIDAK terkunci (!isTerkunci).
 // Jika saat ini variabel `isTerkunci` bernilai false (artinya pintu terbuka), tentukan apakah alarm berbunyi menggunakan operator NOT (!)!
+let isTerkunci = false;
+
+console.log('apakah alarm nyala? ' + isTerkunci);
 
 // Soal 4.5 (Studi Kasus: Beasiswa Prestasi Sekolah - Kombinasi &&, ||, !):
 // Santri berhak menerima beasiswa jika:
 // Memiliki nilai rata-rata ujian minimal 90 ATAU memenangkan lomba tahfidz (juaraTahfidz = true),
 // DAN santri tersebut TIDAK sedang menjalani sanksi pelanggaran asrama (!kenaSanksi).
 // Jika Ahmad memiliki nilai ujian 92, juaraTahfidz = false, dan kenaSanksi = false, tentukan apakah Ahmad berhak menerima beasiswa!
-
+let rataRata = 92;
+let juaraTahfidz = false;
+let kenaSanksi = false;
+let syaratBeasiswa = (rataRata >= 90 || juaraTahfidz == true) && kenaSanksi == false;
+console.log('apakah murid dapat beasiswa? ' + syaratBeasiswa)
 
 // ==============================================================================
 // BAGIAN 5: PERTEMUAN 5 (Unary, Percabangan if, if-else, if-else if, dan switch-case)
@@ -199,12 +238,21 @@ console.log(Boolean(100));
 // Diberikan variabel `nomorAntrean` = 15.
 // Lakukan proses pemanggilan berikutnya dengan increment (`++`), lalu tampilkan nilainya.
 // Setelah itu, karena ada 1 orang yang membatalkan nomor antrean, lakukan decrement (`--`), lalu tampilkan nilainya!
+let nomorAntrean = 15;
+nomorAntrean++;
+nomorAntrean--;
+console.log(nomorAntrean);
 
 // Soal 5.2 (Studi Kasus: Pengecekan KKM Ujian - if - else):
 // Diberikan variabel `nilaiUjian` = 73.
 // Jika nilai minimal 75, tampilkan ke console: "Tuntas: Selamat, Anda Lulus KKM!".
 // Selain itu, tampilkan: "Belum Tuntas: Silakan mengikuti remedial pekan depan!".
-
+let nilaiUjian = 73;
+if (nilaiUjian >= 75) {
+    console.log('Tuntas: Selamat, Anda Lulus KKM!');
+} else {
+    console.log('Belum Tuntas: Silakan mengikuti remedial pekan depan!');
+}
 // Soal 5.3 (Studi Kasus: Klasifikasi Nilai Raport - if - else if - else):
 // Diberikan variabel `skorAkhir` = 83.
 // Buat percabangan untuk menentukan predikat huruf:
@@ -213,6 +261,17 @@ console.log(Boolean(100));
 // - Jika skor >= 70, predikat = "C (Cukup)"
 // - Selain itu, predikat = "D (Perlu Bimbingan)"
 // Cetak predikat akhir ke console!
+let skorAkhir = 83;
+
+if (skorAkhir >= 90) {
+    console.log('A (sangat baik)');
+} else if (skorAkhir >= 80){
+    console.log('B (baik)');
+} else if (skorAkhir >= 70){
+    console.log('C (cukup)')
+} else {
+    console.log('D (perlu bimbingan)')
+}
 
 // Soal 5.4 (Studi Kasus: Sensor Pendeteksi Angka - Ganjil, Genap, atau Nol):
 // Diberikan variabel `bilangan` = 14.
