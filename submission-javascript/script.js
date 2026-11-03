@@ -14,7 +14,6 @@
 // 4. Buka file index.html di browser dan periksa tab Console (F12) untuk melihat output.
 // ==============================================================================
 
-
 // ==============================================================================
 // BAGIAN 1: PERTEMUAN 1 (Variabel var, let, const, Output console.log, dan typeof)
 // ==============================================================================
@@ -30,8 +29,16 @@
 const nis = "20261001";
 let namaSantri = "azzam";
 let umur = 16;
-console.log("Santri bernama " + namaSantri + ", memiliki NIS " + nis + ", dan berumur " + umur + " tahun");
-console.log("tipe data nis:" + typeof(nis) + ", tipe data umur:" + typeof(umur));
+console.log(
+  "Santri bernama " +
+    namaSantri +
+    ", memiliki NIS " +
+    nis +
+    ", dan berumur " +
+    umur +
+    " tahun",
+);
+console.log("tipe data nis:" + typeof nis + ", tipe data umur:" + typeof umur);
 
 // Soal 1.2 (Studi Kasus: Pembaruan Data Buku Perpustakaan):
 // Di perpustakaan sekolah, awalnya jumlah buku matematika (`jumlahBuku`) dicatat sebanyak 25 eksemplar menggunakan 'let'.
@@ -39,7 +46,7 @@ console.log("tipe data nis:" + typeof(nis) + ", tipe data umur:" + typeof(umur))
 // Ubah nilai variabel `jumlahBuku` menjadi 40, lalu cetak nilai terbarunya ke console dengan pesan: "Jumlah buku sekarang: 40"!
 let jumlahBuku = 25;
 jumlahBuku = 40;
-console.log('Jumlah buku sekarang adalah: ' + jumlahBuku);
+console.log("Jumlah buku sekarang adalah: " + jumlahBuku);
 
 // Soal 1.3 (Studi Kasus: Eksperimen Aturan Variabel):
 // Buat variabel `namaKota` menggunakan 'var' dengan nilai "Jakarta", lalu ubah nilainya menjadi "Bandung".
@@ -49,7 +56,6 @@ var namaKota = "jakarta";
 namaKota = "bandung";
 const kodeNegara = "IDN";
 //Mengapa nilai `kodeNegara` tidak boleh diubah menjadi nilai lain?, karena pake variable const jadi gak bisa di tetapkan ulang
-
 
 // ==============================================================================
 // BAGIAN 2: PERTEMUAN 2 (Tipe Data Primitif, Array, Object, null, undefined, & Input)
@@ -61,17 +67,18 @@ const kodeNegara = "IDN";
 // "Halo, nama saya Hilmi, beralamat di Jl. Merdeka No. 10, dan bercita-cita menjadi Programmer."
 let namaLengkap = "hilmi";
 let alamat = "jl.merdeka No. 10";
-let citaCita = "Programmer"
-console.log(`Halo, nama saya ${namaLengkap}, beralamat di ${alamat}, dan bercita - cita menjadi ${citaCita}`);
+let citaCita = "Programmer";
+console.log(
+  `Halo, nama saya ${namaLengkap}, beralamat di ${alamat}, dan bercita - cita menjadi ${citaCita}`,
+);
 
 // Soal 2.2 (Studi Kasus: Data Khusus Kosong - Null vs Undefined):
 // Buat variabel `beasiswa` dengan nilai null (karena beasiswa belum diberikan secara sengaja).
 // Buat variabel `catatanPelanggaran` tanpa memberikan nilai awal sama sekali (undefined).
 // Cetak ke console tipe data dari masing-masing variabel tersebut menggunakan typeof!
 let beasiswa = null;
-let catatanPelanggaran = 
-console.log('tipe data beasiswa: ' + typeof(beasiswa));
-console.log('tipe data catatanPelanggaran: ' + typeof(catatanPelanggaran));
+let catatanPelanggaran = console.log("tipe data beasiswa: " + typeof beasiswa);
+console.log("tipe data catatanPelanggaran: " + typeof catatanPelanggaran);
 
 // Soal 2.3 (Studi Kasus: Menu Makanan Kantin - Array & Method):
 // Buat sebuah array `menuKantin` yang berisi 3 makanan: ['Ayam Geprek', 'Nasi Goreng', 'Mie Ayam'].
@@ -80,11 +87,11 @@ console.log('tipe data catatanPelanggaran: ' + typeof(catatanPelanggaran));
 // 2. Tambahkan lagi menu 'Bakso' menggunakan .push().
 // 3. Hapus menu pertama ('Ayam Geprek') menggunakan method .shift() karena sudah habis terjual.
 // 4. Cetak array `menuKantin` terbaru ke console dan tampilkan makanan favorit pada indeks ke-0!
-let menuKantin = ['Ayam Geprek', ' Nasi Goreng ', ' Mie Ayam ']
-menuKantin.push(' soto ayam ');
-menuKantin.push(' bakso ');
-menuKantin.shift()
-console.log('menu kantin: ' + menuKantin + 'menu favorit ' + menuKantin[0]);
+let menuKantin = ["Ayam Geprek", " Nasi Goreng ", " Mie Ayam "];
+menuKantin.push(" soto ayam ");
+menuKantin.push(" bakso ");
+menuKantin.shift();
+console.log("menu kantin: " + menuKantin + "menu favorit " + menuKantin[0]);
 
 // Soal 2.4 (Studi Kasus: Profil Komprehensif Siswa - Object):
 // Buat sebuah object bernama `profilSantri` yang memiliki properti:
@@ -95,11 +102,11 @@ console.log('menu kantin: ' + menuKantin + 'menu favorit ' + menuKantin[0]);
 // Tambahkan properti baru ke object tersebut: `asrama` dengan nilai "Gedung Al-Fatih".
 // Tampilkan ke console: nama siswa dan hobi keduanya (indeks ke-1)!
 let profilSantri = {
-    nama: 'fahmi',
-    umur: 16,
-    kelas: '10A',
-    hobi: ['membaca', 'coding', 'futsal']
-}
+  nama: "fahmi",
+  umur: 16,
+  kelas: "10A",
+  hobi: ["membaca", "coding", "futsal"],
+};
 profilSantri.asrama = "Gedung Al - Fatih";
 console.log(profilSantri.nama);
 console.log(profilSantri.hobi[1]);
@@ -110,8 +117,7 @@ console.log(profilSantri.hobi[1]);
 // Hitung umur user (tahun sekarang 2026 dikurangi tahun lahir), lalu tampilkan hasilnya menggunakan `alert()`:
 // "Umur Anda saat ini adalah: [hasil_umur] tahun"!
 // let tahunUser = parseInt(prompt('Masukkan tahun lahir anda'));
-// alert(`umur anda saat ini adalah: ${2026 - tahunUser} tahun`); 
-
+// alert(`umur anda saat ini adalah: ${2026 - tahunUser} tahun`);
 
 // ==============================================================================
 // BAGIAN 3: PERTEMUAN 3 (Konversi Tipe Data, Truthy/Falsy, Aritmatika, Penugasan, & Perbandingan)
@@ -121,11 +127,11 @@ console.log(profilSantri.hobi[1]);
 // Diberikan variabel `kodeTransaksi` = 1205. Ubah variabel tersebut menjadi string menggunakan .toString() lalu gabungkan dengan teks "TRX-", sehingga menjadi "TRX-1205".
 // Diberikan juga variabel `stringHarga` = "45000". Ubah menjadi number menggunakan Number(), lalu tambahkan dengan 5000 (biaya admin). Cetak total akhir ke console!
 let kodeTransaksi = 1205;
-let konversi = 'TRX-' + String(kodeTransaksi);
-console.log(konversi)
-let stringHarga = '45000'
+let konversi = "TRX-" + String(kodeTransaksi);
+console.log(konversi);
+let stringHarga = "45000";
 let konver = Number(stringHarga) + 5000;
-console.log('harga total (sudah termasuk biaya admin): ' + konver);
+console.log("harga total (sudah termasuk biaya admin): " + konver);
 
 // Soal 3.2 (Studi Kasus: Validasi Nilai Truthy dan Falsy):
 // Buat pengecekan boolean dengan Boolean() untuk 5 nilai berikut di console:
@@ -149,14 +155,14 @@ console.log(Boolean(100));
 // 4. Tampilkan juga hasil dari 2 pangkat 5 (**) ke console!
 let bukuTulis = 5000 * 4;
 let pulpen = 3000 * 2;
-let total = bukuTulis + pulpen
+let total = bukuTulis + pulpen;
 console.log(`total belanja siti di toko ATK adalah ${total - 2500}`);
 
 let sisaPermen = 17 % 4;
-console.log('sisa permen siti adalah ' + sisaPermen);
+console.log("sisa permen siti adalah " + sisaPermen);
 
 let pangkat = 2 ** 5;
-console.log('hasil dari 2 pangkat 5 adalah ' + pangkat);
+console.log("hasil dari 2 pangkat 5 adalah " + pangkat);
 
 // Soal 3.4 (Studi Kasus: Buku Kas Tabungan - Operator Penugasan / Assignment):
 // Tabungan awal Budi di dompet digital adalah Rp 50.000 (variabel `saldo = 50000`).
@@ -167,9 +173,9 @@ console.log('hasil dari 2 pangkat 5 adalah ' + pangkat);
 // Tampilkan nilai saldo akhir Budi ke console!
 let saldo = 50000;
 saldo += 25000;
-saldo -= 15000
-saldo *= 2
-console.log('sisa saldo budi adalah ' + saldo);
+saldo -= 15000;
+saldo *= 2;
+console.log("sisa saldo budi adalah " + saldo);
 
 // Soal 3.5 (Studi Kasus: Verifikasi Ketat Sistem - Loose vs Strict Comparison):
 // Diberikan variabel `skorA` = 10 (tipe number) dan `skorB` = '10' (tipe string).
@@ -177,11 +183,10 @@ console.log('sisa saldo budi adalah ' + saldo);
 // 2. Bandingkan `skorA === skorB` dan cetak hasilnya ke console (apa hasilnya dan mengapa?).
 // 3. Bandingkan `skorA !== skorB` dan cetak hasilnya ke console!
 let skorA = 10;
-let skorB = '10';
+let skorB = "10";
 console.log(skorA == skorB); //true karena operato hanya membandingkan nilai
 console.log(skorA === skorB); //false karena operato membandingkan nilai dan tipe data
 console.log(skorA !== skorB); //true karena 10 bukan sama dgn string
-
 
 // ==============================================================================
 // BAGIAN 4: PERTEMUAN 4 (Operator Logika &&, ||, !)
@@ -194,15 +199,17 @@ console.log(skorA !== skorB); //true karena 10 bukan sama dgn string
 let lulusPraktek = true;
 let usiaRian = 18;
 let syaratSimC = usiaRian >= 17 && lulusPraktek == true;
-console.log('apakah rian memenuhi syarat?? ' + syaratSimC);
+console.log("apakah rian memenuhi syarat?? " + syaratSimC);
 
 // Soal 4.2 (Studi Kasus: Autentikasi Login Akun Ujian - Operator &&):
 // Seorang siswa hanya dapat login ke ruang ujian jika username bernilai "siswa10A" DAN token bernilai "PAS2026".
 // Jika seorang siswa menginput username = "siswa10A" dan token = "PAS2025", tentukan apakah status login berhasil menggunakan operator &&!
-let username = "siswa10A"
-let token = "PAS2025"
-let loginUjian = username == 'siswa10A' && token == 'PAS2026';
-console.log('apakah siswa memenuhi syarat login ke ruang ujian?? ' + loginUjian);
+let username = "siswa10A";
+let token = "PAS2025";
+let loginUjian = username == "siswa10A" && token == "PAS2026";
+console.log(
+  "apakah siswa memenuhi syarat login ke ruang ujian?? " + loginUjian,
+);
 
 // Soal 4.3 (Studi Kasus: Tiket Masuk Edupark - Operator ||):
 // Wahana wisata edukasi memberikan tiket masuk gratis jika pengunjung berusia balita (kurang dari 5 tahun) ATAU berstatus penyandang disabilitas (isDisabilitas = true).
@@ -210,14 +217,17 @@ console.log('apakah siswa memenuhi syarat login ke ruang ujian?? ' + loginUjian)
 let usiaPengunjung = 4;
 let isDisabilitas = false;
 let tiketGratis = usiaPengunjung < 5 || isDisabilitas == true;
-console.log('apakah pengunjung memenuhi syarat unutk mendapat tiket gratis? ' + tiketGratis);
+console.log(
+  "apakah pengunjung memenuhi syarat unutk mendapat tiket gratis? " +
+    tiketGratis,
+);
 
 // Soal 4.4 (Studi Kasus: Sistem Keamanan Laboratorium Komputer - Operator !):
 // Alarm pengaman pintu lab akan menyala jika status pintu TIDAK terkunci (!isTerkunci).
 // Jika saat ini variabel `isTerkunci` bernilai false (artinya pintu terbuka), tentukan apakah alarm berbunyi menggunakan operator NOT (!)!
 let isTerkunci = false;
 
-console.log('apakah alarm nyala? ' + isTerkunci);
+console.log("apakah alarm nyala? " + isTerkunci);
 
 // Soal 4.5 (Studi Kasus: Beasiswa Prestasi Sekolah - Kombinasi &&, ||, !):
 // Santri berhak menerima beasiswa jika:
@@ -227,8 +237,9 @@ console.log('apakah alarm nyala? ' + isTerkunci);
 let rataRata = 92;
 let juaraTahfidz = false;
 let kenaSanksi = false;
-let syaratBeasiswa = (rataRata >= 90 || juaraTahfidz == true) && kenaSanksi == false;
-console.log('apakah murid dapat beasiswa? ' + syaratBeasiswa)
+let syaratBeasiswa =
+  (rataRata >= 90 || juaraTahfidz == true) && kenaSanksi == false;
+console.log("apakah murid dapat beasiswa? " + syaratBeasiswa);
 
 // ==============================================================================
 // BAGIAN 5: PERTEMUAN 5 (Unary, Percabangan if, if-else, if-else if, dan switch-case)
@@ -249,9 +260,9 @@ console.log(nomorAntrean);
 // Selain itu, tampilkan: "Belum Tuntas: Silakan mengikuti remedial pekan depan!".
 let nilaiUjian = 73;
 if (nilaiUjian >= 75) {
-    console.log('Tuntas: Selamat, Anda Lulus KKM!');
+  console.log("Tuntas: Selamat, Anda Lulus KKM!");
 } else {
-    console.log('Belum Tuntas: Silakan mengikuti remedial pekan depan!');
+  console.log("Belum Tuntas: Silakan mengikuti remedial pekan depan!");
 }
 // Soal 5.3 (Studi Kasus: Klasifikasi Nilai Raport - if - else if - else):
 // Diberikan variabel `skorAkhir` = 83.
@@ -264,13 +275,13 @@ if (nilaiUjian >= 75) {
 let skorAkhir = 83;
 
 if (skorAkhir >= 90) {
-    console.log('A (sangat baik)');
-} else if (skorAkhir >= 80){
-    console.log('B (baik)');
-} else if (skorAkhir >= 70){
-    console.log('C (cukup)')
+  console.log("A (sangat baik)");
+} else if (skorAkhir >= 80) {
+  console.log("B (baik)");
+} else if (skorAkhir >= 70) {
+  console.log("C (cukup)");
 } else {
-    console.log('D (perlu bimbingan)')
+  console.log("D (perlu bimbingan)");
 }
 
 // Soal 5.4 (Studi Kasus: Sensor Pendeteksi Angka - Ganjil, Genap, atau Nol):
@@ -279,6 +290,14 @@ if (skorAkhir >= 90) {
 // - Jika bilangan === 0, cetak "Bilangan Nol"
 // - Jika sisa bagi bilangan dengan 2 adalah 0 (`bilangan % 2 === 0`), cetak "Bilangan Genap"
 // - Selain itu, cetak "Bilangan Ganjil"!
+let bilangan = 14;
+if (bilangan === 0) {
+  console.log("bilangan nol");
+} else if (bilangan % 2 === 0) {
+  console.log("bilangan genap");
+} else {
+  console.log("biangan ganjil");
+}
 
 // Soal 5.5 (Studi Kasus: Menu Hari Piket Asrama - switch - case):
 // Diberikan variabel `nomorHari` = 3 (1 = Senin, 2 = Selasa, 3 = Rabu, 4 = Kamis, 5 = Jum'at, 6 = Sabtu, 7 = Ahad).
@@ -287,6 +306,28 @@ if (skorAkhir >= 90) {
 // - case 6: Tampilkan "Hari Olahraga dan Kerja Bakti Lingkungan"
 // - case 7: Tampilkan "Hari Kunjungan Orang Tua dan Istirahat"
 // - default: Tampilkan "Nomor hari tidak valid (masukkan angka 1 - 7)"!
+let nomerHari = 1;
+
+switch (nomerHari) {
+  case 1:
+  case 2:
+  case 3:
+  case 4:
+  case 5:
+    console.log('Tampilkan "Hari Sekolah dan Kegiatan Belajar');
+    break;
+
+  case 6:
+    console.log("Hari Olahraga dan Kerja Bakti Lingkungan");
+    break;
+
+  case 7:
+    console.log("Hari Kunjungan Orang Tua dan Istirahat");
+    break;
+
+  default:
+    console.log("Nomor hari tidak valid (masukkan angka 1 - 7)");
+}
 
 // Soal 5.6 (Studi Kasus: Pengelompokan Kategori Makanan Sehat - switch case grouping):
 // Diberikan variabel `pilihanMakanan` = "salad".
@@ -294,7 +335,6 @@ if (skorAkhir >= 90) {
 // - Jika "salad" atau "jus buah" -> Tampilkan: "Pilihan Sangat Sehat: Kaya Nutrisi dan Vitamin!"
 // - Jika "burger" atau "gorengan" -> Tampilkan: "Pilihan Kurang Sehat: Batasi konsumsi minyak dan lemak!"
 // - default -> Tampilkan: "Menu makanan tidak terdaftar di database kantin sehat."
-
 
 // ==============================================================================
 // BAGIAN 6: PERTEMUAN 6 (Perulangan for, while, do-while, & Percabangan di dalam Loop)
@@ -329,7 +369,6 @@ if (skorAkhir >= 90) {
 // Gunakan `do...while` loop untuk mencetak "Mesin generator berhasil diuji pada putaran daya ke-[daya]" lalu naikkan daya (daya++),
 // dengan kondisi while `daya < 10` (kondisi langsung bernilai false).
 // Buktikan bahwa blok di dalam do tetap dijalankan minimal 1 kali!
-
 
 // ==============================================================================
 // BAGIAN 7: PERTEMUAN 7 (Function: Deklarasi, Parameter, Default Parameter, & Geometri)
@@ -376,9 +415,7 @@ if (skorAkhir >= 90) {
 // 1. hitungTotalKoperasi("Azzam", 120000, true)
 // 2. hitungTotalKoperasi("Baim", 80000, false)
 
-
 // ==============================================================================
 //                           AKHIR DARI SUBMISSION
 //             Selamat Mengerjakan & Terus Semangat Belajar Javascript!
 // ==============================================================================
-
